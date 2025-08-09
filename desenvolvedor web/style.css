@@ -1,0 +1,580 @@
+/* Reset básico */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+.logo{
+  flex: 0 0 350px;
+}
+
+.logo img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  background: linear-gradient(45deg, #545454, #000000);
+  color:#000000;
+  line-height: 1.6;
+   padding-top: 120px; /* MESMA ALTURA da NAV! */
+}
+
+/* Navbar */
+nav {
+  background: #545454;
+  color: #ffffff;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 20px;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 1000;
+  height: 120px; /* ADICIONE ESTA LINHA SE A ALTURA DA NAV FOR FIXA */
+}
+
+nav a {
+  color: #ffffff;
+  margin: 1rem;
+  text-decoration: none;
+  transition: color 0.3s;
+}
+nav a.active {
+  color: #f0c14b;
+  font-weight: bold;
+}
+nav a:hover {
+  color: #000000;
+}
+
+.logo {
+  height: 150px;
+  width: auto;
+  max-width: 100%;
+}
+/* Slider */
+.slider {
+
+  position: relative;
+  width:100%;
+  height: 800px; /* ajuste conforme o necessário */
+  max-height: 900px; /* ajuste conforme o necessário */
+  overflow: hidden;
+}
+
+.slider img {
+ 
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: auto;
+  object-fit: cover; /* cobre todo o espaço mantendo o aspecto visual */
+  opacity: 0;
+  transition: opacity 1s ease-in-out;
+  z-index: 0;
+}
+
+.slider img.active {
+  
+  
+   opacity: 1;
+  z-index: 1;
+}
+
+/* Seções */
+main section {
+  padding: 4rem;
+  max-width: 1200px;
+  margin: auto;
+}
+
+h2 {
+  color: #ffffff;
+  margin-bottom: 2rem;
+  margin-top: 90px;
+}
+
+p {
+    color: #ffffff;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+li{
+  color: #ffffff;
+  margin-bottom: 10px;
+}
+/* Serviços - Cards */
+.services {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2rem;
+  justify-content: center;
+}
+
+.sobre {
+  text-align: center;
+  margin-top: 100px;
+} 
+
+.logo{
+  
+  margin-left: 20px;
+}
+.card {
+  flex: 1;
+  min-width: 250px;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  padding: 1rem;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  background: #fff;
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+}
+
+.botao-whatsapp {
+  display: inline-block;
+  background-color: #25D366;
+  color: white;
+  padding: 30px 50px;       /* Aumentei o padding para deixar maior */
+  text-decoration: none;
+  font-weight: bold;
+  font-size: 30px;          /* Aumentei o tamanho da fonte */
+  border-radius: 10px;      /* Bordas um pouco mais arredondadas */
+  box-shadow: 0 6px 8px rgba(0, 0, 0, 0.25); /* Sombra mais forte */
+  transition: background-color 0.3s ease;
+  min-width: 250px;         /* Largura mínima para o botão */
+  text-align: center;       /* Centraliza o texto dentro do botão */
+}
+
+.botao-whatsapp:hover {
+  background-color: #1ebd5c;
+}
+/* Formulário */
+form input,
+form textarea {
+  width: 100%;
+  padding: 0.8rem;
+  margin-bottom: 1rem;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+form button {
+  padding: 0.8rem 1.5rem;
+  background: #333;
+  color: #fff;
+  border: none;
+  cursor: pointer;
+  border-radius: 4px;
+  transition: background 0.3s;
+}
+
+form button:hover {
+  background: #555;
+}
+
+/* Footer */
+footer {
+  background: #222;
+  color: #ccc;
+  text-align: center;
+  padding: 1rem;
+}
+
+footer a {
+  color: #ccc;
+  text-decoration: none;
+  margin: 0 0.5rem;
+}
+
+footer a:hover {
+  color: #f0c14b;
+}
+
+
+
+/* Blog */
+#blog {
+  padding:2rem;
+  max-width: 1200px;
+  margin: auto;
+}
+
+.blog-posts {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2rem;
+  justify-content: center;
+}
+
+.post {
+  background: #fff;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  overflow: hidden;
+  max-width: 350px;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.post img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+}
+
+.post h3 {
+  padding: 1rem;
+  font-size: 1.2rem;
+  color: #555;
+}
+
+h4 {
+
+  color: #eeeeee;
+}
+
+.post p {
+  padding: 0 1rem;
+  color: #555;
+}
+
+.card p {
+  padding: 0 1rem;
+  color: #555;
+}
+.post a {
+  display: block;
+  padding: 1rem;
+  text-align: right;
+  color: #333;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.post:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 5px 10px rgba(0,0,0,0.2);
+}
+
+
+.pagination {
+  display: flex;
+  justify-content: center;
+  margin: 2rem 0;
+  gap: 1rem;
+}
+
+.pagination a,
+.pagination span {
+  padding: 0.5rem 1rem;
+  border: 1px solid #333;
+  text-decoration: none;
+  color: #333;
+  border-radius: 4px;
+}
+
+.pagination a:hover {
+  background-color: #333;
+  color: #fff;
+}
+
+.pagination .current-page {
+  background-color: #333;
+  color: #fff;
+  font-weight: bold;
+}
+
+.botao-whatsapp {
+  display: inline-block;
+  background-color: #25D366;
+  color: white;
+  padding: 10px 20px;
+  text-decoration: none;
+  border-radius: 5px;
+  font-weight: bold;
+}
+.botao-whatsapp:hover {
+  background-color: #128C7E;
+}
+
+.whatsapp-float {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  z-index: 1000;
+}
+
+.whatsapp-float img {
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+  transition: transform 0.3s ease;
+}
+
+.whatsapp-float img:hover {
+  transform: scale(1.1);
+}
+
+.menu-fixo {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 120px; /* <--- defina conforme o tamanho do seu menu */
+  
+  backdrop-filter: blur(10px);  /* Efeito vidro fosco */
+  background-color: rgba(255, 255, 255, 0.2);  /* Fundo semi-transparente */
+  border-bottom: 1px solid rgba(255, 255, 255, 0.3);
+  transition: background-color 0.5s, box-shadow 0.5s;
+  z-index: 1000;
+  display: flex;
+ 
+}
+
+.menu-fixo ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+}
+
+.menu-fixo li {
+  margin: 0;
+}
+
+.menu-fixo a {
+  color: #a588e9;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.menu-fixo.scrolled {
+  background-color: rgba(0, 0, 0, 0.6);  /* Fica mais escuro ao rolar */
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.4);
+}
+
+.slider {
+  position: relative; 
+  
+}
+
+.slide {
+  position: relative;
+  
+}
+
+.slide img {
+  width: 200%;
+  height:auto;
+  display: block;
+  
+}
+
+.overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.9); /* Aqui controla o escurecimento */
+  z-index: 1;
+}
+
+.voltar-blog {
+  color: #a588e9; /* Cor personalizada */
+  text-decoration: none; /* Remove sublinhado */
+}
+
+.voltar-blog:hover {
+  color: #8a6fd1; /* Cor um pouco mais escura ao passar o mouse */
+}
+
+
+/* ======== RESPONSIVIDADE ======== */
+@media (max-width: 768px) {
+  nav {
+    display: flex;
+    flex-direction: row;  /* Mantém em linha */
+    justify-content: space-between; /* Logo à esquerda, links à direita */
+    align-items: center;
+    height: 70px;  /* Navbar menor para celular */
+    padding: 0 20px;
+    box-sizing: border-box;
+  }
+
+  nav .logo {
+    height: 50px;
+    flex: 0 0 auto;
+    margin: 0;
+  }
+
+   .logo img {
+    height: 100%;
+    width: auto;
+    display: block;
+  }
+   nav a {
+    color: #fff;
+    margin-left: 15px;
+    margin-right: 15px;
+    font-size: 1rem;
+    text-decoration: none;
+    white-space: nowrap;
+    transition: color 0.3s;
+  }
+    nav a:first-of-type {
+    margin-left: 0;
+  }
+
+  nav a:last-of-type {
+    margin-right: 0;
+  }
+
+  nav a:hover {
+    color: #000000;
+  }
+
+  nav a.active {
+    color: #f0c14b;
+    font-weight: bold;
+  }
+  body {
+    padding-top: 80px; /* Ajusta o padding-top para altura nova da navbar */
+  }
+
+  /* Outras responsividades mantidas */
+  
+  /* Slider */
+  .slider {
+    height: 300px;
+    max-height: 400px;
+  }
+
+  .slider img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    position: absolute;
+  }
+
+  /* Serviços */
+  .services {
+    flex-direction: column;
+    gap: 1.5rem;
+    padding: 0 1rem;
+  }
+
+  .card {
+    min-width: 100%;
+    max-width: 100%;
+  }
+
+  /* Botão whatsapp */
+  .botao-whatsapp {
+    font-size: 18px;
+    padding: 12px 25px;
+    min-width: auto;
+    width: 100%;
+    text-align: center;
+  }
+
+  /* Seções */
+  main section {
+    padding: 2rem 1rem;
+  }
+
+  /* Títulos */
+  h2 {
+    font-size: 1.5rem;
+    margin-top: 70px;
+  }
+
+  /* Texto */
+  p, li {
+    font-size: 1rem;
+  }
+
+  /* Blog */
+  .blog-posts {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .post {
+    max-width: 90vw;
+    margin-bottom: 2rem;
+  }
+
+  /* Logo */
+  .logo {
+    height: 50px;
+  }
+}
+
+@media (max-width: 480px) {
+  nav a {
+    font-size: 0.9rem;
+    margin: 0 8px;
+  }
+
+  .botao-whatsapp {
+    font-size: 16px;
+    padding: 10px 15px;
+  }
+
+  main section {
+    padding: 1rem 0.5rem;
+  }
+
+  h2 {
+    font-size: 1.3rem;
+    margin-top: 50px;
+  }
+
+  p, li {
+    font-size: 0.9rem;
+  }
+}
+@media (max-width: 768px) {
+  /* Navbar */
+  /*nav {
+    flex-direction: column;
+    align-items: center;
+    height: auto;
+    padding: 10px;
+  }*/
+}
+  nav .logo {
+    height: 100px;
+    margin-bottom: 10px;
+    margin-left: 0;
+  }
+
+  nav a {
+    margin: 0.5 rem 30px;
+    font-size: 0.70rem;
+  }
+
+  body {
+    padding-top: 130px;
+  }
